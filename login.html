@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="logo.css">
+	<script src="login.js" defer></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript">
+		function LoginForm(){
+			alert("The form was submitted.");
+		}
+	</script>
+	<script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+	
+	<script>
+	  // Initialize Firebase
+	  var config = {
+		apiKey: "AIzaSyCtZzSpqzAhsEhv6A7moZKyzd6YCr8G1xw",
+		authDomain: "taste-the-world-7f128.firebaseapp.com",
+		databaseURL: "https://taste-the-world-7f128.firebaseio.com",
+		projectId: "taste-the-world-7f128",
+		storageBucket: "taste-the-world-7f128.appspot.com",
+		messagingSenderId: "952093961541"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+</head>
+<body background="circle.jpg"> 	
+		<div class="topnav" align="topnav">
+             <div class="navbar">
+				<h1><a href="index.html" style="color:green;">Home</a></h1>
+				<div class="dropdown">
+						<button class="dropbtn">Countries
+							<i class="fa fa-caret-down"></i>
+						</button>
+						<div class="dropdown-content">
+								<h1><a href="bangladesh.html" style="color:green;" > Bangladesh </a></h1>
+								<h1><a href="pakistan.html" style="color:green;" > Pakistan </a></h1>
+								<h1><a href="nepal.html" style="color:green;" > Nepal </a></h1>
+							</div>
+				
+			 
+				</div> 
+				<h1><a href="aboutUs.html" style="color:green;" > About Us </a></h1>
+				<h1><a href="contactUs.html" style="color:green;" > Contact Us </a></h1>
+				<h1><a href="login.html" style="color:green;" > Sign Up </a></h1>
+				<img id = "logo1" src = "Screenshot (2).png">
+			</div>
+
+	 </div>
+		 
+         </div>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br>
+
+<center>
+<form  action="" onsubmit="LoginForm()" >
+<b style="color: white;">First name:</b><br>
+<input type="text" name="firstname" class="name1" maxlength="20" placeholder="firstname.." required>
+<br>
+<b style="color: white;">Last name:</b><br>
+<input type="text" name="lastname" class="name2" maxlength="20" placeholder="lastname.." required>
+<br>
+<b style="color: white;">Email:</b><br>
+<input type="text" name="email" maxlength="40" class="user_email" placeholder="email.."  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+<br>
+<input type="submit" class="submitButton" value="Sign Up">
+<input type="reset" value="Reset">
+</form>
+</center>
+
+</body>
+</html>

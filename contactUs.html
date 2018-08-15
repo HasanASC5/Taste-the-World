@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="logo.css">
+	<script src="contactUs.js" defer></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript">
+		function contactUsForm(){
+			var x = document.getElementById("mail").pattern;
+
+			alert("Thank You for taking your time to contact us :P .")
+		}
+	</script>
+	<script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+	
+	<script>
+	  // Initialize Firebase
+	  var config = {
+		apiKey: "AIzaSyCtZzSpqzAhsEhv6A7moZKyzd6YCr8G1xw",
+		authDomain: "taste-the-world-7f128.firebaseapp.com",
+		databaseURL: "https://taste-the-world-7f128.firebaseio.com",
+		projectId: "taste-the-world-7f128",
+		storageBucket: "taste-the-world-7f128.appspot.com",
+		messagingSenderId: "952093961541"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+</head>
+<body background="wally.jpg" style="width:1366px;height:768px;">
+<div class="topnav" align="topnav">
+
+
+		   <div class="navbar">
+				<h1><a href="index.html" style="color:green;">Home</a></h1>
+				<div class="dropdown">
+						<button class="dropbtn">countries
+						  <i class="fa fa-caret-down"></i>
+						</button>
+						<div class="dropdown-content">
+							<h1><a href="bangladesh.html" style="color:green;" > Bangladesh </a></h1>
+							<h1><a href="pakistan.html" style="color:green;" > Pakistan </a></h1>
+							<h1><a href="nepal.html" style="color:green;" > Nepal </a></h1>
+
+							</div>
+						</div> 
+						<h1><a href="aboutUs.html" style="color:green;" > About Us </a></h1>
+						<h1><a href="contactUs.html" style="color:green;" > Contact Us </a></h1>
+						<h1><a href="login.html" style="color:green;" > Sign Up </a></h1>
+			  </div>
+
+
+         </div>
+		 <br><br><br>
+         <br><br><br>
+         <br><br><br>
+         <br><br><br>
+<center>
+<form action=""  onsubmit="contactUsForm()" >
+<b>Name:</b><br>
+<input type="text" name="name" class="name" placeholder="Full Name..." required><br>
+<b>E-mail:</b><br>
+<input type="text" id="mail" name="email" class="email" placeholder="Your E-mail Address..." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required><br>
+<b>Comment:</b><br>
+<input type="text" name="comment" class="comment" placeholder="Enter your comments here..." id= "comment" size="50" required><br><br>
+<input type="submit" class="submitButton" value="Send">
+<input type="reset" value="Reset">
+</form>
+</center>
+<br> <br> <br>
+<br> <br> <br>
+<h1 class = "upperbar">
+    <img id = "logo" src = "Screenshot (2).png">
+				 Thank You For Your Visit
+				 <br> 
+    <div class = "social_media">
+    
+		Follow us!  
+		<br>
+		<br>
+	</div>
+        <div class = "youtube">
+                <button>
+                        <a href="https://www.youtube.com/watch?v=N54RkDpYs2I" class="button">
+                            <img id ="Youtube" src="https://i.ytimg.com/vi/tISTO09N850/maxresdefault.jpg">
+                        </a></button>
+        </div>    
+        <div class = "facebook">
+                <button>
+                        <a href="https://www.facebook.com/ryderz.king11/" class="button">
+                            <img id ="fb" src="https://banner2.kisspng.com/20171216/213/facebook-logo-png-5a35528eaa4f08.7998622015134439826976.jpg">
+                        </a></button>
+        </div>
+        <div class = "twitter">
+                <button>
+                        <a href="http://twitter.com/AllStarCode" class="button">
+                            <img id ="twitter" src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c53e.png" class="logo_design">
+                            </a></button>
+
+        </div>
+        <div class = "instagram">
+                <button>
+                        <a href="http://twitter.com/AllStarCode" class="button">
+                            <img id ="ig" src="https://icon2.kisspng.com/20171220/efe/instagram-png-logo-5a3aafcc5b7867.9903973715137955323747.jpg" class="logo_design">
+                            </a></button>
+        
+    </div>
+    
+</body>
+</html>

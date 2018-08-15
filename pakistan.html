@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title></title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript"  charset="utf-8">
+ var value;
+           var productid;
+
+            function setitem(a) {
+               value = a.value;               productid = a.getAttribute("productid");
+               price = a.getAttribute("price");
+                var intRegex = /^\d+$/;
+                if (!intRegex.test(value) || (value <= 0)) {
+                    alert('Please Enter valid number of items');
+                } else {
+                    numberofitem = value;
+                }
+            }
+
+            function getcookie() {
+                if (value == undefined) {
+                    alert("There is nothing in the shopping cart!");
+                } else {
+                    var cookiearray = document.cookie.split(';');
+                    var toprint = "Shopping Cart Items\n----------------------\n";
+                    for (var i = 0; i < cookiearray.length; ++i) {
+                        var pairArray = cookiearray[i].split('=');
+                        toprint += "Item ID:\t" + pairArray[0] + "\nQty:\t" + unescape(pairArray[1]) + "\n-------------------------------\n";
+                    }
+                    // alert(toprint);
+                }
+            }
+
+            function setcookie() {
+                if (value == undefined) {
+                    alert("Please add number of items in text box");
+                } else {
+                    document.cookie = productid + "=" + value + "; ";
+
+                    alert(value + " Product(s) with id " + productid +
+                            " has been added to shopping cart!");
+                }
+                document.getElementById("item-select").value = "";
+            }
+        </script>
+  
+</head>
+<body bgcolor="skyblue">
+        <div class="topnav" align="topnav">
+             
+
+                <div class="navbar">
+                    <h1><a href="index.html" style="color:green;">Home</a></h1>
+                    <div class="dropdown">
+                        <button class="dropbtn">countries
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <h1><a href="bangladesh.html" style="color:green;" > Bangladesh </a></h1>
+                            <h1><a href="pakistan.html" style="color:green;" > Pakistan </a></h1>
+                            <h1><a href="nepal.html" style="color:green;" > Nepal </a></h1>
+                            <h1><a href="addToCart.html" style="color:green;" > Add to Cart </a></h1>
+
+                          </div>
+                    
+                   
+                    </div> 
+                    <h1><a href="aboutUs.html" style="color:green;" > About Us </a></h1>
+                    <h1><a href="contactUs.html" style="color:green;" > Contact Us </a></h1>
+                    <h1><a href="login.html" style="color:green;" > Sign Up </a></h1>
+                  </div>
+      
+               </div>
+              <ul class="col-sm-4 navbar-right"  >
+                    <li><a href="checkout.html"  class="btn_btn-info"><img src="shopcart.png" style="width:55px;height:40px;"></a></li>
+                    </ul>
+         
+              </div>
+         <br><br><br><br>
+         <br>         
+         <center>
+         <div class="row">
+            <div class="col-md-4"></div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">Item 1: 1101 </div>
+                    <div class="panel-body">
+                        <img src="nepal.jpg" alt="Nepali Food" style="width:304px;height:228px;"> 
+                        <h1>Thali</h1>
+                        <br>
+
+                        These three constituents form the regular lunch and dinner of Nepali.<br> Dhal is a soup made of leguminous seeds, and may be cooked with<br> onion, salt, and garlic; bhat is white edible grains; and tarkari could<br> be a dish of vegetables or meat, cooked in oil, with onions,<br> ginger, garlic, turmeric, and various spices. There is no Nepali, who <br>has not consumed dhal, bhat, and tarkari in his or her life.<br> This is a popular dish not only in the home, but also in the parties, <br>restaurants, and hotels. And this dish is available from the <br>west to the east and from the north to the south of Nepal. You can eat <br>this dish with your hand. That is a Nepali style, while <br>
+                        Dhal, Bhat, and tarkari is a national dish of Nepal.<br><br>
+                        Price $7.00<br>
+
+                        Quantity: <input id="item-select" productid="1101" style="width: 50px" onBlur="setitem(this)" />
+                        <button type="button" onclick="setcookie()">Add to cart.</button>
+                        <br><br>
+
+                    </div>
+         </div>
+
+
+          <div class="row">
+          <div class="col-sm-4"></div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">Item 2: 1234 </div>
+                    <div class="panel-body"> 
+                    <img src="momo.jpg" alt="dumplings" style="width:304px;height:228px;">  
+                    <h1>Dumplings</h1>
+                    <br> 
+                        Actually, this is a Tibetan food, but it has become the tastiest<br> food of the Nepali people. Every Nepali has relished for <br>
+                        this food. It is made by kneading white flour and water and is <br>filled up with mince meat or mince cabbage, mixed with salt, <br>ginger, onion, and spices. It is cooked by steaming. It will <br>be unfair if you do not eat or taste this food. This is one of <br>
+                        the famous foods of Nepal, and there is no point in arguing that<br> momo has a distinctive taste. It is a savory dish and is <br>
+                        served with condiments, made of tomatoes, or chillies, or “teel.”<br><br>
+                        Price $5.99<br>
+
+                        Quantity: <input name="item-select" id="item-select" productid="1234" style="width: 50px" onBlur="setitem(this)" />
+                        <button type="button" onclick="setcookie()">Add to cart.</button>
+                        <br><br>
+                        </div>
+                </div>
+                        
+          <div class="row">
+          <div class="col-sm-4"></div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">Item 3: 0134 </div>
+                    <div class="panel-body"> 
+                    <img src="taas.jpg" alt="Nepali Food" style="width:304px;height:228px;"> 
+                    <h1>Taas</h1>
+                    <br>
+                      This is a meat item ( lamb or chicken).  It is marinated by mixing with<br> salt, cumming powder, corainder powder, meat masala, <br>
+                      green chilli, turmeric, paste (garlic and ginger), and oil, overnight.<br> It is cooked until it becomes red. It is served with condiment<br> of radish as well as with rice. It also goes well with the <br>third most popular drink of the world, beer.
+<br>
+<br>
+                      Price $5.99<br>
+
+                      Quantity: <input name="item-select" id="item-select" productid="0134" style="width: 50px" onBlur="setitem(this)" />
+                        <button type="button" onclick="setcookie()">Add to cart.</button>
+                        <br><br>
+                        </div>
+                        </div>
+            </div>
+
+                        
+    </center>
+
+                
+               
+</body>
+</html>

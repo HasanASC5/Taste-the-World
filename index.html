@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<title> Food Site</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="logo.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ </head>
+
+<body >
+        <div class="topnav" align="topnav">
+            
+
+         <div class="navbar">
+             <h1><a href="index.html" style="color:green;">Home</a></h1>
+             <div class="dropdown">
+                 <button class="dropbtn">Countries
+                   <i class="fa fa-caret-down"></i>
+                 </button>
+                 <div class="dropdown-content">
+                     <h1><a href="bangladesh.html" style="color:green;" > Bangladesh </a></h1>
+                     <h1><a href="pakistan.html" style="color:green;" > Pakistan </a></h1>
+                     <h1><a href="nepal.html" style="color:green;" > Nepal </a></h1> 
+                   </div>
+             
+            
+             </div> 
+             <h1><a href="aboutUs.html" style="color:green;" > About Us </a></h1>
+             <h1><a href="contactUs.html" style="color:green;" > Contact Us </a></h1>
+             <h1><a href="login.html" style="color:green;" > Sign Up </a></h1>
+           </div>
+
+        </div>
+        <!-- <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+     -->
+<center>
+
+<div class="slideshow-container">
+<h1>TASTE THE WORLD: </h1>  
+<p5>EAT MORE! HELP MORE! SAVE MORE!</p5>
+
+<div class="mySlides fade">
+ <img src="momo.jpg" alt="dumplings" style="width:1000px;height:450px;">
+ <div class="text"><p style = "color: brown;">Dumplings</div>
+</div>
+
+<div class="mySlides fade">
+ <img src="nepal.jpg" alt="Nepali Food" style="width:1000px;height:450px;">
+ <div class="text"><p style = "color: brown;">Thali (Nepali Food)</p></div>
+</div>
+
+<div class="mySlides fade">
+ <img src="taas.jpg" alt="Nepali Food" style="width:1000px;height:450px;"> 
+ <div class="text"><p style = "color: brown;">Taas (Nepali Food)</div>
+</div>
+
+<div class="mySlides fade">
+ <img src="ff1.jpg" alt="sandwichwes" style="width:1000px;height:450px;"> 
+ <div class="text"><h3 style = "color: brown;">Sandwiches</h3></div>
+</div>
+
+<div class="mySlides fade">
+ <img src="ff2.jpg" alt="Tacos" style="width:1000px;height:450px;"> 
+ <div class="text"><h2 style = "color: brown;">Tacos</h2></div>
+</div>
+<div class="mySlides fade">
+<img src="ff3.jpg" alt="Subway Fast Food" style="width:1000px;height:450px;"> 
+ <div class="text"><h3 style = "color: brown;">Subway</h3></div>
+</div>
+
+</div>
+</center>
+
+<div style="text-align:center">
+ <span class="dot" ></span> 
+ <span class="dot" ></span> 
+ <span class="dot" ></span> 
+ <span class="dot" ></span> 
+ <span class="dot" ></span> 
+ <span class="dot" ></span> 
+</div>
+
+
+<script>
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+   var i;
+   var slides = document.getElementsByClassName("mySlides");
+   var dots = document.getElementsByClassName("dot");
+   
+   for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+   }
+   slideIndex++;
+   if (slideIndex> slides.length) {slideIndex = 1}    
+   for (i = 0; i < dots.length; i++) {
+       dots[i].className = dots[i].className.replace(" active", "");
+   }
+   slides[slideIndex-1].style.display = "block";  
+   dots[slideIndex-1].className += " active";
+   setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+   
+        
+</body>
+</html>
+
+
+
+
+
+
+
+
+               
+
+
+
+  
